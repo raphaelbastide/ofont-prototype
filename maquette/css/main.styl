@@ -1,0 +1,222 @@
+@import 'nib/vendor'
+@import 'nib/gradients'
+
+html{height:100%;color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:inherit;font-weight:inherit;}del,ins{text-decoration:none;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:baseline;}sub{vertical-align:baseline;}legend{color:#000;}input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}input,button,textarea,select{*font-size:100%;} button { background: none; border: none; margin: 0; padding: 0; width: auto; overflow: visible; line-height:inherit;}button::-moz-focus-inner{padding:0;border:0;}
+*{-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;}
+
+transition(properties, durations, timings)
+    -moz-transition-property arguments
+    -o-transition-property arguments
+    -webkit-transition-property arguments
+    -ms-transition-property arguments
+    transition-property properties
+    -moz-transition-duration durations
+    -o-transition-duration durations
+    -webkit-transition-duration durations
+    -ms-transition-duration durations
+    transition-duration durations
+    -moz-transition-timing-function timings
+    -o-transition-timing-function timings
+    -webkit-transition-timing-function timings
+    -ms-transition-timing-function timings
+    transition-timing-function timings
+
+// fonts
+osans = 'Open Sans', verdana, arial
+omono = 'Cousine', Lucida Console, Monaco, monospace
+default =  #4B484D
+grey0 = hsla(0, 0%, 95%, 1)
+grey1 = hsla(0, 0%, 90%, 1)
+grey2 = hsla(0, 0%, 80%, 1)
+grey3 = hsla(0, 0%, 60%, 1)
+grey4 = hsla(0, 0%, 10%, 1)
+sum = hsla(274, 6%, 60%, 1)
+ogreen = hsla(107, 37%, 60%, 1)
+oblue = hsla(220, 37%, 60%, 1)
+
+#grid
+    display none
+    background url(../img/grid.gif)
+    width 2000px
+    height 2000px
+    opacity .2
+    position absolute
+body
+    font-family osans
+    font-size 12px
+    //color hsla(0, 0%, 10%, 1)
+    color default
+    height 100%
+header, #find, section
+    width 100%
+    background grey1
+    padding 20px 20px 0px 20px 
+#find, section
+    border-bottom grey2 solid 1px
+header
+    position fixed
+    top 0
+    left 0
+    transition(all, 0.1s, ease-out)
+    background default
+    height 60px
+    #logo
+        float left
+        position relative
+        top -9px
+        left -1px
+        height 36px
+        width 200px
+        opacity .8
+        &:hover
+            opacity .9
+    #topRightMenu, #topCenterMenu
+        li
+            float left
+            margin 0 0 0 10px
+            a
+                display block
+                height 20px
+                text-align center
+                width 60px
+                background #59555C
+                line-height 19px
+                transition(all, 0.07s, ease-out)
+                color #D1C9D7
+                &:hover
+                    background #403B45
+                    a
+                        color #F2EBF7
+                &:active
+                    transition(all, 0s, ease-out)
+                    background #2D2A30
+    // Minified header
+    &.min 
+        padding 0px 20px 0px 20px 
+        height 20px
+        #logo
+            height 20px
+            top 1px
+            img
+                transition(all, 0.1s, ease-out)
+                height 18px
+    #topRightMenu
+        float right
+    #topCenterMenu
+        float left
+        li
+            margin 0 10px 0 0
+.col2
+    float right
+    width 800px
+.col1
+    float left
+#find
+    padding-top 80px
+    height 180px
+    #upload, #mainSum, #order
+        display block
+        margin -3px 0 0 0
+        color sum
+    #upload
+        float left
+        width 200px
+    #mainSum
+        float left
+        width 200px
+    #order
+        float right
+        margin 0 0 0 10px
+        width 190px
+        .orderSelect
+            color default
+    input#search
+        transition(all, 0.2s, ease-out)
+        font-size 20px
+        float left
+        padding 0 10px
+        width 600px
+        height 40px
+        margin 20px 0 0 0
+        background grey0 url(../img/search.png) no-repeat bottom right
+        &.enlight
+            background #F5EE8D
+#content
+    overflow hidden
+    section
+        border-bottom grey2 solid 1px        
+    h3
+        display block
+        float left
+        font-weight bold
+        font-size 20px
+        letter-spacing 1px
+        margin 0 10px 0 0
+    h4
+        display block
+        color grey4
+        margin 30px 0 5px 0
+    li
+        margin 0 0 2px 0
+    .addto
+        transition(all, 0.1s, ease-out)
+        display block
+        float left
+        font-size 19px
+        background grey1
+        color grey3
+        width 20px
+        text-align center
+        height 20px
+        line-height 18px
+        margin 5px 0 0 0
+        cursor pointer
+        &:hover
+            background grey0
+    .itemInfo, .itemSum
+        margin 10px 0 0 0
+        width 200px
+        float left
+        min-height 80px
+    .itemInfo
+        clear both
+        ul
+            li:before
+                content "— "
+                padding 0 5px 0 0    
+    .itemPreview
+        width 100%
+        height 100px
+        background #fcfcfc
+        font-size 60px
+        overflow hidden
+        padding 10px
+        color black
+    .itemTags
+        clear both
+        width 300px
+        height 20px
+        color oblue
+        li
+            float left
+            margin 0 10px 0 0
+a
+    color black
+    text-decoration none
+    
+// Form
+input
+    transition(all, 0.1s, ease-out)
+    padding 4px
+    background grey0 
+    border-top 1px solid grey2
+    border-left 0px
+    border-right 0px
+    border-bottom 0px
+input:hover, input:focus
+    background white
+    color inherit
+.ogreen
+    color ogreen   
