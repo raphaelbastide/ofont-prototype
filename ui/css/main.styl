@@ -148,7 +148,9 @@ header
 #content
     overflow hidden
     section
-        border-bottom grey2 solid 1px        
+        border-bottom grey2 solid 1px
+        overflow hidden
+        padding-bottom 10px
     h3
         display block
         float left
@@ -158,8 +160,9 @@ header
         margin 0 10px 0 0
     h4
         display block
-        color grey4
-        margin 30px 0 5px 0
+        font-weight bold
+        font-size 16px
+        margin 30px 0 10px 0
     li
         margin 0 0 2px 0
     .addto
@@ -182,8 +185,10 @@ header
         width 200px
         float left
         min-height 80px
-    .itemInfo
+    .itemInfo, .itemEdit
+        overflow hidden
         clear both
+    .itemInfo
         ul
             li:before
                 content "— "
@@ -199,7 +204,6 @@ header
     .itemTags
         clear both
         width 300px
-        height 20px
         color oblue
         li
             float left
@@ -207,8 +211,29 @@ header
 a
     color black
     text-decoration none
-    
+
+// Single
+#single
+    .itemEdit
+        margin 40px 0 0 0
+        clear both
+        ul
+            li
+                height 20px
+                display block
+                margin 0 0 10px 0
+                label, span.editable
+                    display block
+                    width 200px
+                    float left
+                button.add
+                    margin 0 0 0 10px
+    .editable
+        background grey0
+        padding 0 3px
+                    
 // Form
+
 input
     transition(all, 0.1s, ease-out)
     padding 4px

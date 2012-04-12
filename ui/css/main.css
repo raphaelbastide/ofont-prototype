@@ -380,6 +380,8 @@ header #topCenterMenu li {
 }
 #content section {
   border-bottom: #ccc solid 1px;
+  overflow: hidden;
+  padding-bottom: 10px;
 }
 #content h3 {
   display: block;
@@ -391,8 +393,9 @@ header #topCenterMenu li {
 }
 #content h4 {
   display: block;
-  color: #1a1a1a;
-  margin: 30px 0 5px 0;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 30px 0 10px 0;
 }
 #content li {
   margin: 0 0 2px 0;
@@ -441,7 +444,9 @@ header #topCenterMenu li {
   float: left;
   min-height: 80px;
 }
-#content .itemInfo {
+#content .itemInfo,
+#content .itemEdit {
+  overflow: hidden;
   clear: both;
 }
 #content .itemInfo ul li:before {
@@ -460,7 +465,6 @@ header #topCenterMenu li {
 #content .itemTags {
   clear: both;
   width: 300px;
-  height: 20px;
   color: #738cbf;
 }
 #content .itemTags li {
@@ -470,6 +474,28 @@ header #topCenterMenu li {
 a {
   color: #000;
   text-decoration: none;
+}
+#single .itemEdit {
+  margin: 40px 0 0 0;
+  clear: both;
+}
+#single .itemEdit ul li {
+  height: 20px;
+  display: block;
+  margin: 0 0 10px 0;
+}
+#single .itemEdit ul li label,
+#single .itemEdit ul li span.editable {
+  display: block;
+  width: 200px;
+  float: left;
+}
+#single .itemEdit ul li button.add {
+  margin: 0 0 0 10px;
+}
+#single .editable {
+  background: #f2f2f2;
+  padding: 0 3px;
 }
 input {
   -moz-transition-property: all;
