@@ -1,0 +1,28 @@
+{
+  "name": "ofont",
+  "version": "0.0.1",
+  "description": "Organize fonts freely",
+  "author": "Pierre Bertet <bonjour@pierrebertet.net>",
+  "homepage": "http://ofont.net/",
+  "contributors": [
+    "Raphaël Bastide <bonjour@raphaelbastide.com> (http://raphaelbastide.com/)",
+    "Pierre Bertet <bonjour@pierrebertet.net> (http://pierrebertet.net/)"
+  ],
+  "private": true,
+  "dependencies": {
+    "underscore": "*",
+    "consolidate": "*",
+    "express": "git://github.com/visionmedia/express.git",
+    "hogan.js": "2.0",
+    "nib": "0.4",
+    "stylus": "0.25"
+  },
+  "devDependencies": {
+    "vows": "0.6.1"
+  },
+  "engine": "node >= 0.6.6",
+  "scripts": {
+    "test": "vows --spec",
+    "start": "node app.js"
+  }
+}
